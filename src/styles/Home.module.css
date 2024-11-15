@@ -1,0 +1,61 @@
+/* src/styles/Home.module.css */
+
+.homeContainer {
+  background-image: url('/my_bg_pic.jpg'); /* Ensure the image path is correct */
+  background-size: cover;
+  background-position: left;
+  min-height: 200vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
+  color: white;
+  text-align: left; /* Default text alignment set to left */
+}
+
+/* Left alignment */
+.left {
+  align-items: flex-start; /* Aligns the content to the left */
+  text-align: left;
+}
+
+/* Heading with animation */
+.title {
+  font-size: 3rem;
+  margin-top: -65rem;
+  text-align: left !important;
+  margin-bottom: 0px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: 0.1s;
+}
+
+/* Description with animation */
+.description {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* Keyframes for zoom-up animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
